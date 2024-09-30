@@ -2,7 +2,7 @@ package com.principal.SpringDB.EntidadesTablas;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 //quitar metodos get and set
@@ -17,11 +17,13 @@ public class TablaUsuarios {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank
+    @NotEmpty(message = "no puede esta vacio desde ENTIDAD")
     private String nombre;
-    @NotNull(message = "no puede esta vacio el campo edad")
+    @NotNull
     private Integer edad;
+    @NotEmpty
     private String genero;
+    @NotEmpty
     @Email
     private String correo;
 

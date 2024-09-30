@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- los link permite enlazar con las plantillas y uso thymlief-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Plantilla</title>
+</head>
+<body>
+  <!-- se puede crear varias plantillas para el uso de cada página -->
+  <header th:fragment="encabezado">
+    <h1>Soy el encabezado</h1>
+  </header>
+
+  <header th:fragment="encabezado2">
+    <h4>Soy el encabezado 2</h4>
+  </header>
+
+  <footer th:fragment="piePagina">
+    <h6>Soy el pie de pagina</h6>
+  </footer>
+</body>
+</html>
