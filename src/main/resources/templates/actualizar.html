@@ -8,7 +8,7 @@
 <body>
 <h1>Actualizar Usuario</h1>
 <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
-<form th:action="@{/guardar}" method="post" th:object="${tablaUsuarios}">
+<form th:action="@{/v1/guardar}" method="post" th:object="${tablaUsuarios}">
   <!-- Esta linea permite es tomar el id del usuario y sobre ese hace
    la sobre escritura-->
   <input type="hidden" name="tablaUsuarios" th:field="*{id}">
@@ -28,7 +28,7 @@
   <span th:if="${#fields.hasErrors('correo')}" th:errores="*{correo}">Falta el correo</span>
   <button class="btn btn-success" type="submit">Guardar</button>
 </form>
-<a class="btn btn-warning" href="/prueba">Regresar</a>
+<a class="btn btn-warning" th:href="@{/v1/prueba}">Regresar</a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
