@@ -27,9 +27,9 @@
                 <td th:text="${usuario.edad}"></td>
                 <td th:text="${usuario.genero}"></td>
                 <td th:text="${usuario.correo}"></td>
-                <td> <a th:href="@{/cambiar/{id}(id=${usuario.id})}" th:text="Modificar"/></td>
+                <td> <a th:href="@{/v1/cambiar/{id}(id=${usuario.id})}" th:text="Modificar"/></td>
                 <!--redirige a pagina actualizar con el id del usuario que se modificara-->
-                <td> <a th:href="@{/borrar/{id}(id=${usuario.id})}" th:text="Borrar"/></td>
+                <td> <a th:href="@{/v1/borrar/{id}(id=${usuario.id})}" th:text="Borrar"/></td>
             </tr>
         </tbody>
     </table>
@@ -38,6 +38,7 @@
         No hay registros
     </div>
     <a class="btn btn-primary" href="agregar">Agregar</a>
+    <a class="btn btn-primary" th:href="@{/v1/footer/admin}">Footer</a>
 
     <footer th:replace="Plantillas/headFooter :: piePagina"></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
